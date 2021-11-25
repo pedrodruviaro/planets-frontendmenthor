@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -40,4 +40,13 @@ export const GlobalStyles = createGlobalStyle`
     }
 
 
+`;
+
+export const AppWrapper = styled.main`
+    background-image: url(${"/images/background-stars.svg"});
+    background-color: #070724;
+
+    min-height: 100vh;
+
+    color: #fff;
 `;
