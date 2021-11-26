@@ -19,8 +19,6 @@ export const Container = styled.header`
     nav {
         display: flex;
         gap: 2rem;
-
-        overflow-y: scroll;
     }
 
     @media (max-width: 55rem) {
@@ -37,6 +35,8 @@ export const Container = styled.header`
             right: 0;
             left: 0;
             bottom: 0;
+            overflow-y: scroll;
+            z-index: 999;
 
             background-color: #070724;
 

@@ -204,3 +204,28 @@ export const InfoItem = styled.li`
         color: #fff;
     }
 `;
+
+export const ImageContainer = styled.div`
+    position: relative;
+
+    span {
+        position: absolute;
+        max-width: 6rem;
+        bottom: -2rem;
+        right: 35%;
+
+        animation: show 300ms forwards;
+    }
+
+    @keyframes show {
+        from {
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+`;
