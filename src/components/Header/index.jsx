@@ -1,14 +1,15 @@
-import React from "react";
-import { Container, LinkNav } from "./styles.jsx";
+import React, { useState } from "react";
+import { Container, Hamburger, LinkNav } from "./styles.jsx";
 
 import planets from "../../data/data.json";
 
 const planetsNames = Object.keys(planets);
 
 export const Header = () => {
-    console.log(planetsNames);
+    const [navbarOpen, setNavbarOpen] = useState(false);
+
     return (
-        <Container>
+        <Container active={navbarOpen}>
             <h1>The planets</h1>
             <nav>
                 {planetsNames.map((name) => (
@@ -17,6 +18,13 @@ export const Header = () => {
                     </LinkNav>
                 ))}
             </nav>
+
+            <Hamburger
+                active={navbarOpen}
+                onClick={() => setNavbarOpen(!navbarOpen)}
+            >
+                <span></span>
+            </Hamburger>
         </Container>
     );
 };
