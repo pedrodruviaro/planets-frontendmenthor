@@ -57,7 +57,7 @@ export const Container = styled.header`
     }
 `;
 
-export const LinkNav = styled.a`
+export const LinkNav = styled.span`
     text-transform: uppercase;
     font-size: 0.6875rem;
     font-weight: 700;
@@ -65,6 +65,8 @@ export const LinkNav = styled.a`
     display: block;
     position: relative;
     line-height: 4rem;
+
+    cursor: pointer;
 
     @media (min-width: 45rem) {
         &::before {
